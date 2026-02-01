@@ -18,10 +18,6 @@
     }
     /* grey 400 #6A7178 */
     /* white #fff */
-    .red { color: #EA5454; }
-    .cyan { color: #44D3D2; }
-    .blue { color: #549EF2; }
-    .orange { color: #FCAE4A; }
 
     /* semibold 600 */
     /* extralight 200 */
@@ -73,6 +69,42 @@
         font-weight: 600;
       }
     }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 135%;
+      letter-spacing: 0px;
+    }
+
+    section {
+      margin: 2em 0;
+      /* Q: is it possible to write the rbga values as hex but with alpha/opacity still set? */
+      box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+      border-radius: 5px;
+      padding: 2em;
+      overflow: hidden;
+
+      position: relative;
+
+      > p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 0px;
+      }
+    }
+
+    .accent::before {
+      content: '';
+      width: 100%; height: 5px;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .cyan.accent::before { background-color: #44D3D2; }
+    .red.accent::before { background-color: #EA5454; }
+    .orange.accent::before { background-color: #FCAE4A; }
+    .blue.accent::before { background-color: #549EF2; }
     </style>
   </head>
   <body>
@@ -89,25 +121,25 @@
       to ensure that your project is successful
     </p>
 
-    <section>
+    <section class='cyan accent'>
       <h2>Supervisor</h2>
       <p>Monitors activity to identify project roadblocks</p>
       <img src="./images/icon-supervisor.svg" alt="Supervisor Icon">
     </section>
 
-    <section>
+    <section class='red accent'>
       <h2>Team Builder</h2>
       <p>Scans our talent network to create the optimal team for your project</p>
       <img src="./images/icon-team-builder.svg" alt="Team Builder Icon">
     </section>
 
-    <section>
+    <section class='orange accent'>
       <h2>Karma</h2>
       <p>Regularly evaluates our talent to ensure quality</p>
       <img src="./images/icon-karma.svg" alt="Karma Icon">
     </section>
 
-    <section>
+    <section class='blue accent'>
       <h2>Calculator</h2>
       <p>Uses data from past projects to provide better delivery estimates</p>
       <img src="./images/icon-calculator.svg" alt="Calculator Icon">
