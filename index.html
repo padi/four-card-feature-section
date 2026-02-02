@@ -77,12 +77,16 @@
       letter-spacing: 0px;
     }
 
-    section {
+    .accent:nth-of-type(1) {
+      margin-top: 3em;
+    }
+
+    .accent {
       margin: 2em 0;
       /* Q: is it possible to write the rbga values as hex but with alpha/opacity still set? */
       box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
       border-radius: 5px;
-      padding: 2em;
+      padding: 1em 2em;
       overflow: hidden;
 
       position: relative;
@@ -93,6 +97,9 @@
         line-height: 160%;
         letter-spacing: 0px;
       }
+      > img {
+        float: right;
+      }
     }
 
     .accent::before {
@@ -101,6 +108,7 @@
       position: absolute;
       top: 0; left: 0;
     }
+
     .cyan.accent::before { background-color: #44D3D2; }
     .red.accent::before { background-color: #EA5454; }
     .orange.accent::before { background-color: #FCAE4A; }
