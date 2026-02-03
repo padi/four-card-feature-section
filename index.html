@@ -35,7 +35,12 @@
       }
     }
 
-    body > p {
+    .hero-text {
+      margin: 0 auto;
+      max-width: 540px;
+    }
+
+    .hero-text > p {
       margin-top: 1em;
       font-size: 15px;
       font-weight: 400;
@@ -44,7 +49,8 @@
       text-align: center;
     }
 
-    .accent:nth-of-type(1) {
+    main {
+      margin: 0 auto;
       margin-top: 4em;
     }
 
@@ -91,46 +97,73 @@
     .red.accent::before { background-color: #EA5454; }
     .orange.accent::before { background-color: #FCAE4A; }
     .blue.accent::before { background-color: #549EF2; }
+
+    #supervisor { grid-area: supervisor; } 
+    #karma { grid-area: karma; } 
+    #team-builder { grid-area: team-builder; } 
+    #calculator { grid-area: calculator; } 
+
+    /* This changes the layout for screens wider than 48em */
+    @media (min-width: 48em) {
+      h1 {
+        font-size: 36px;
+      }
+      main {
+        display: grid;
+        gap: 2em;
+        justify-content: center;
+        grid-template:
+          ".          team-builder team-builder ."
+          "supervisor supervisor   karma        karma"
+          ".          calculator   calculator   .";
+        grid-template-columns: repeat(4, 23%);
+        grid-template-rows: repeat(3, 30%);
+      }
+      .accent { margin: 0; }
+    }
     </style>
   </head>
   <body>
 
-    <h1>
-      Reliable, efficient delivery
-    </h1>
-    <h1>
-      <b>
-        Powered by Technology
-      </b>
-    </h1>
+    <div class='hero-text'>
+      <h1>
+        Reliable, efficient delivery
+      </h1>
+      <h1>
+        <b>
+          Powered by Technology
+        </b>
+      </h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data points 
+        to ensure that your project is successful
+      </p>
+    </div>
 
-    <p>
-      Our Artificial Intelligence powered tools use millions of project data points 
-      to ensure that your project is successful
-    </p>
+    <main>
+      <section id='supervisor' class='cyan accent'>
+        <h2>Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="./images/icon-supervisor.svg" alt="Supervisor Icon">
+      </section>
 
-    <section class='cyan accent'>
-      <h2>Supervisor</h2>
-      <p>Monitors activity to identify project roadblocks</p>
-      <img src="./images/icon-supervisor.svg" alt="Supervisor Icon">
-    </section>
+      <section id='team-builder' class='red accent'>
+        <h2>Team Builder</h2>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <img src="./images/icon-team-builder.svg" alt="Team Builder Icon">
+      </section>
 
-    <section class='red accent'>
-      <h2>Team Builder</h2>
-      <p>Scans our talent network to create the optimal team for your project</p>
-      <img src="./images/icon-team-builder.svg" alt="Team Builder Icon">
-    </section>
+      <section id='karma' class='orange accent'>
+        <h2>Karma</h2>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="./images/icon-karma.svg" alt="Karma Icon">
+      </section>
 
-    <section class='orange accent'>
-      <h2>Karma</h2>
-      <p>Regularly evaluates our talent to ensure quality</p>
-      <img src="./images/icon-karma.svg" alt="Karma Icon">
-    </section>
-
-    <section class='blue accent'>
-      <h2>Calculator</h2>
-      <p>Uses data from past projects to provide better delivery estimates</p>
-      <img src="./images/icon-calculator.svg" alt="Calculator Icon">
-    </section>
+      <section id='calculator' class='blue accent'>
+        <h2>Calculator</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="./images/icon-calculator.svg" alt="Calculator Icon">
+      </section>
+    </main>
   </body>
 </html>
