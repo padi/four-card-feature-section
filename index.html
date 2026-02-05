@@ -116,10 +116,32 @@
           ".          team-builder team-builder ."
           "supervisor supervisor   karma        karma"
           ".          calculator   calculator   .";
-        grid-template-columns: repeat(4, 23%);
-        grid-template-rows: repeat(3, 30%);
+        grid-template-columns: repeat(4, minmax(0, 157px));
+        grid-template-rows: repeat(3, 1fr);
       }
       .accent { margin: 0; }
+    }
+    @media (min-width: 90em) {
+      body {
+        padding-top: 6.375em;
+      }
+      main {
+        margin-top: 4.625em;
+
+        display: grid;
+        gap: 2em;
+
+        justify-content: center;
+        align-content: center;
+
+        grid-template:
+          ".          team-builder ."
+          "supervisor team-builder calculator"
+          "supervisor karma        calculator"
+          ".          karma        .";
+        grid-template-columns: repeat(3, minmax(0, 350px));
+        grid-template-rows: repeat(4, 1fr);
+      }
     }
     </style>
   </head>
