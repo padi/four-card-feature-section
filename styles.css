@@ -41,7 +41,7 @@ h1 {
   text-align: center;
 }
 
-main {
+#feature-cards {
   margin: 0 auto;
   margin-top: 4em;
 }
@@ -126,7 +126,7 @@ main {
     font-size: 36px;
   }
 
-  main {
+  #feature-cards {
     display: grid;
     gap: 2em;
     justify-content: center;
@@ -148,7 +148,7 @@ main {
     padding-top: 6.375em;
   }
 
-  main {
+  #feature-cards {
     margin-top: 4.625em;
 
     display: grid;
