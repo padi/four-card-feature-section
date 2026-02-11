@@ -57,6 +57,10 @@ h1 {
   overflow: hidden;
   position: relative;
 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+
   >h2 {
     font-size: 20px;
     font-weight: 600;
@@ -73,9 +77,9 @@ h1 {
     color: #6A7178;
   }
 
-  >img {
+  >.feature-icon {
     padding: 2em 0 1em 0;
-    float: right;
+    align-self: flex-end;
   }
 }
 
