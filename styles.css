@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+:root {
+  font-size: 16px;
+}
+
 body {
   padding: 3em 2em;
 
@@ -15,7 +19,7 @@ body {
 
 h1 {
   font-weight: 200;
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 140%;
   letter-spacing: 0.25px;
 
