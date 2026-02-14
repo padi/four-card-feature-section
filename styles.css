@@ -14,9 +14,11 @@
   --color-blue: #549EF2;
   --color-grey-500: #4D4F62;
   --color-grey-400: #6A7178;
+  --background-white: #FAFAFA;
 }
 
 body {
+  background: var(--background-white);
   padding: 3em 2em;
 
   font-family: "Poppins", sans-serif;
