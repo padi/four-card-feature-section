@@ -12,13 +12,15 @@
   --color-red: #EA5454;
   --color-orange: #FCAE4A;
   --color-blue: #549EF2;
+  --color-grey-500: #4D4F62;
+  --color-grey-400: #6A7178;
 }
 
 body {
   padding: 3em 2em;
 
   font-family: "Poppins", sans-serif;
-  color: #4d4f62;
+  color: var(--color-grey-500);
 }
 
 h1 {
@@ -42,7 +44,7 @@ h1 {
 
 .hero-text>p {
   margin-top: 1em;
-  font-size: 15px;
+  font-size: 0.9375em;
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.1px;
@@ -70,7 +72,7 @@ h1 {
   align-items: flex-start;
 
   >h2 {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: 600;
     line-height: 135%;
     letter-spacing: 0px;
@@ -78,11 +80,11 @@ h1 {
 
   >p {
     margin-top: 8px;
-    font-size: 13px;
+    font-size: 0.8125em;
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0px;
-    color: #6A7178;
+    color: var(--color-grey-400);
   }
 
   >.feature-icon {
@@ -135,7 +137,7 @@ h1 {
 /* This changes the layout for screens wider than 48em */
 @media (min-width: 48em) {
   h1 {
-    font-size: 36px;
+    font-size: 2.25em;
   }
 
   #feature-cards {
