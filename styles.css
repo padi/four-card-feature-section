@@ -8,6 +8,10 @@
 
 :root {
   font-size: 16px;
+  --color-cyan: #44D3D2;
+  --color-red: #EA5454;
+  --color-orange: #FCAE4A;
+  --color-blue: #549EF2;
 }
 
 body {
@@ -97,19 +101,19 @@ h1 {
 }
 
 .cyan.accent::before {
-  background-color: #44D3D2;
+  background-color: var(--color-cyan);
 }
 
 .red.accent::before {
-  background-color: #EA5454;
+  background-color: var(--color-red);
 }
 
 .orange.accent::before {
-  background-color: #FCAE4A;
+  background-color: var(--color-orange);
 }
 
 .blue.accent::before {
-  background-color: #549EF2;
+  background-color: var(--color-blue);
 }
 
 #supervisor {
